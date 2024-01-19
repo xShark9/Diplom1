@@ -1,0 +1,76 @@
+﻿<Page x:Class="AuthAPP.Views.Pages.TeachPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AuthAPP.Views.Pages"
+      mc:Ignorable="d"
+      Loaded="Page_Loaded"
+      d:DesignHeight="590" d:DesignWidth="1000"
+      Title="TeachPage"
+    xmlns:theme="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero2">
+    <Page.Resources>
+        
+    </Page.Resources>
+
+    <Grid Background="#eff2f7">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="800"/>
+            <ColumnDefinition Width="100"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="450"/>
+            <RowDefinition Height="75"/>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="TBlockWelcom" HorizontalAlignment="Left" Margin="26,29,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontFamily="Tahoma" FontSize="22" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+        <Grid Grid.Column="1" Grid.Row="1">
+            <!--<DataGrid Style="{DynamicResource DataGridStyle1}" CellStyle="{DynamicResource DataGridCellStyle1}" ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" RowStyle="{DynamicResource DataGridRowStyle1}" x:Name="DridTc" AutoGenerateColumns="False" Margin="20,25,752,290">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="№ п/п" Width="*" Binding="{Binding IdUser}"/>
+                    <DataGridTextColumn Header="Имя" Width="*" Binding="{Binding FirstName}"/>
+                    <DataGridTextColumn Header="Фамилия" Width="*" Binding="{Binding LastName}"/>
+                    <DataGridTextColumn Header="Отчество" Width="*" Binding="{Binding Patronymic}"/>
+                    <DataGridTextColumn Header="Дата рождения" Width="*" Binding="{Binding DateBirth}"/>
+                    <DataGridTextColumn Header="Класс" Width="*" Binding="{Binding Class}"/>
+                    <DataGridTextColumn Header="Роль" Width="*" Binding="{Binding Roles.RoleName}"/>
+                    <DataGridTextColumn Header="Пол" Width="*" Binding="{Binding Genders.GenderName}"/>
+                </DataGrid.Columns>
+            </DataGrid>-->
+
+            <DataGrid CanUserAddRows="False" RowStyle="{DynamicResource DataGridRowStyle1}" CellStyle="{DynamicResource DataGridCellStyle1}" Style="{DynamicResource DataGridStyle1}" ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" x:Name="Dtgrid"  AutoGenerateColumns="False" Margin="10" Height="400">
+                <DataGrid.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="Удалить" x:Name="dlt" Click="dlt_Click"/>
+                    </ContextMenu>
+                </DataGrid.ContextMenu>
+                <DataGrid.Columns>
+                    <DataGridCheckBoxColumn CanUserResize="False" Width="50" ElementStyle="{StaticResource CheckBoxStyle1}">
+                        <DataGridCheckBoxColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <CheckBox Style="{StaticResource CheckBoxStyle1}"/>
+                            </DataTemplate>
+                        </DataGridCheckBoxColumn.HeaderTemplate>
+                    </DataGridCheckBoxColumn>
+                    <DataGridTextColumn Header="№ п/п" Width="*" Binding="{Binding IdUser}" x:Name="usrid"/>
+                    <DataGridTextColumn Header="Имя" Width="*" Binding="{Binding FirstName}"/>
+                    <DataGridTextColumn Header="Фамилия" Width="*" Binding="{Binding LastName}"/>
+                    <DataGridTextColumn Header="Отчество" Width="*" Binding="{Binding Patronymic}"/>
+                    <DataGridTextColumn Header="Дата рождения" Width="*" Binding="{Binding DateBirth, StringFormat=\{0:dd.MM.yyyy\}}"/>
+                    <!-- <DataGridTextColumn Header="Пол" Width="*" Binding="{Binding GenderId}"/> -->
+                    <DataGridTextColumn Header="Класс" Width="*" Binding="{Binding Class}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+        <Grid Grid.Row="2" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Content="Загрузка контрольных работ" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Click="Button_Click" Style="{StaticResource buttonMain}" Width="250"/>
+            <Button Grid.Column="1" Content="Посмотреть оценки" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="btndel" Click="btndel_Click" Style="{StaticResource buttonMain}" Width="200"/>
+
+        </Grid>
+        </Grid>
+</Page>

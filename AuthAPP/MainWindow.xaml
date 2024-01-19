@@ -1,0 +1,47 @@
+﻿<Window x:Class="AuthAPP.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AuthAPP"
+        mc:Ignorable="d"
+        Title="{Binding ElementName=AuthFrame, Path=Content.Tittle}" Height="650" Width="1000" Loaded="WindowLoaded"
+        WindowStartupLocation="CenterScreen"
+        MouseDown="Window_MouseDown"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        AllowsTransparency="True"
+        Background="Transparent">
+
+    <Grid>
+        
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="30"/>
+            </Grid.RowDefinitions>
+            <Border Grid.Row="0" Background="#ffffff" CornerRadius="25 25 0 0" BorderThickness="2 2 2 0" BorderBrush="#363636">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="350"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Grid.Column="1" Source="C:\Users\shark\source\repos\AuthAPP\AuthAPP\Resources\remove.png" Width="20" Margin="0 7 50 0" MouseDown="Image_Min" Style="{StaticResource iconApp}"/>
+                    <Image Grid.Column="1" Source="C:\Users\shark\source\repos\AuthAPP\AuthAPP\Resources\close.png" Width="15" Margin="0 7 20 0" MouseDown="Img_close" Style="{StaticResource iconApp}"/>
+                </Grid>
+            </Border>
+            <Border  Grid.Row="1" Background="#ffd500" BorderBrush="#363636" BorderThickness="2 0 2 0">
+                <Frame x:Name="AuthFrame" NavigationUIVisibility="Hidden"  Navigated="AuthFrame_Navigated"  />
+            </Border>
+            <Border Background="#ffffff" CornerRadius="0 0 25 25" Grid.Row="2" BorderThickness="2 0 2 2" BorderBrush="#363636">
+                
+            </Border>
+
+
+
+        </Grid>
+        
+        
+    </Grid>
+</Window>

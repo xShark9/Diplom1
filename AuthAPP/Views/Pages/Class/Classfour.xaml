@@ -1,0 +1,116 @@
+﻿<Page x:Class="AuthAPP.Views.Pages.Class.Classfour"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AuthAPP.Views.Pages.Class"
+      mc:Ignorable="d" 
+      d:DesignHeight="1000" d:DesignWidth="1000"
+      Title="Classfour" Loaded="Page_Loaded">
+
+    <Grid Background="White">
+        <ScrollViewer>
+            <StackPanel>
+                <Grid>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="50"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Label Grid.Row="0" Grid.ColumnSpan="3" Content="Содержание" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30" FontWeight="SemiBold"/>
+                       
+                        <!--#region Видео уроки --> 
+                        <Grid Grid.Row="1" Grid.Column="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="60"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="0"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="50"/>
+                                <RowDefinition Height="55"/>
+                                <RowDefinition Height="55"/>
+                                <RowDefinition Height="55"/>
+                                <RowDefinition Height="55"/>
+                            </Grid.RowDefinitions>
+                            <Label Grid.Row="0" Grid.Column="1" Content="Видеоуроки" FontSize="20" FontWeight="SemiBold" Padding="10" HorizontalContentAlignment="Center"/>
+                            <Label Grid.Row="1" Grid.Column="0" Style="{StaticResource Label}" Content="№1"/>
+                            <Button x:Name="bnt3" Grid.Column="1" Grid.Row="1" HorizontalContentAlignment="Left" Click="bnt3_Click" Style="{StaticResource button menu}">
+                                <TextBlock Margin="5 5 5 5" FontSize="15" FontWeight="SemiBold">Нумерация</TextBlock>
+                            </Button>
+                            <Label Grid.Row="2" Grid.Column="0" Content="№2" Style="{StaticResource Label}"/>
+                            <Button  Grid.Column="1" Grid.Row="2" x:Name="bnt2" Click="bnt2_Click" IsEnabled="True" HorizontalContentAlignment="Left" Style="{StaticResource button menu}">
+                                <TextBlock Margin="5 5 5 5" FontSize="15" FontWeight="SemiBold">Порядок выполнения действий в выражениях</TextBlock>
+                            </Button>
+                            <Label Grid.Row="3" Grid.Column="0" Content="№3" Style="{StaticResource Label}"/>
+                            <Button  Grid.Column="1" Grid.Row="3" x:Name="bntvideo3" Click="bntvideo3_Click" IsEnabled="True" HorizontalContentAlignment="Left" Style="{StaticResource button menu}">
+                                <TextBlock Margin="5 5 5 5" FontSize="15" FontWeight="SemiBold">Сложение и вычитание</TextBlock>
+                            </Button>
+                            <Label Grid.Row="4" Grid.Column="0" Content="№4" Style="{StaticResource Label}"/>
+                            <Button  Grid.Column="1" Grid.Row="4" x:Name="bntvideo4" Click="bntvideo4_Click" IsEnabled="True" HorizontalContentAlignment="Left" Style="{StaticResource button menu}">
+                                <TextBlock Margin="5 5 5 5" FontSize="15" FontWeight="SemiBold">Сумма трёх слагаемых. Алгоритм вычитания</TextBlock>
+                            </Button>
+                        </Grid>
+                        <!--#endregion-->
+                        
+                        <!--#region Центр -->
+                        <Grid Grid.Row="1" Grid.Column="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                            </Grid.RowDefinitions>
+                        </Grid>
+                        <!--#endregion-->
+                        
+                        <!--#region Котрольные работы-->
+                        <Grid Grid.Column="2" Grid.Row="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="350"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="50"/>
+                                <RowDefinition Height="55"/>
+                                <RowDefinition Height="55"/>
+                                <RowDefinition Height="55"/>
+                                <RowDefinition Height="55"/>
+                            </Grid.RowDefinitions>
+                            <Label Grid.ColumnSpan="3" Grid.Row="0" Content="Контрольные работы" FontSize="20" FontWeight="SemiBold" HorizontalContentAlignment="Center" Padding="10"/>
+                            <Label Grid.Row="1" Grid.Column="0" Content="№1" Style="{StaticResource Label}"/>
+                            <Label Grid.Row="2" Grid.Column="0" Content="№2" Style="{StaticResource Label}"/>
+                            <Label Grid.Row="3" Grid.Column="0" Content="№3" Style="{StaticResource Label}"/>
+                            <Label Grid.Row="4" Grid.Column="0" Content="№4" Style="{StaticResource Label}"/>
+                            <Button x:Name="bnt1" Grid.Column="1" Grid.Row="1" HorizontalContentAlignment="Left" IsEnabled="True" Click="bnt1_Click" Style="{StaticResource button menu}">
+                                <TextBlock Margin="5 5 5 5" FontSize="15" FontWeight="SemiBold"> Сложение, вычитание, деление, умножение</TextBlock>
+                            </Button>
+                            <Button x:Name="bnt4" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" IsEnabled="True" Click="bnt4_Click" Style="{StaticResource button menu}">
+                                <TextBlock Margin="5 5 5 5"  FontSize="15" FontWeight="SemiBold"> Решение неравенств</TextBlock>
+                            </Button>
+                            <Button x:Name="bnt5" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Left" IsEnabled="True" Click="bnt5_Click" Style="{StaticResource button menu}">
+                                <TextBlock Margin="5 5 5 5"  FontSize="15" FontWeight="SemiBold">Нахождение доли числа и числа по доле</TextBlock>
+                            </Button>
+                            <Button x:Name="bnt6" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Left" IsEnabled="True" Click="bnt6_Click" Style="{StaticResource button menu}">
+                                <TextBlock Margin="5 5 5 5"  FontSize="15" FontWeight="SemiBold">Итоговый за  1 раздел</TextBlock>
+                            </Button>
+                        </Grid>
+                        <!--#endregion-->
+                        
+                    </Grid>
+                </Grid>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

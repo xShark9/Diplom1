@@ -1,0 +1,164 @@
+﻿<Page x:Class="AuthAPP.Views.Pages.Class.Numbers_and_figures.NumTwo"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AuthAPP.Views.Pages.Class.Numbers_and_figures"
+      mc:Ignorable="d" 
+      d:DesignHeight="850" d:DesignWidth="1000"
+      Title="NumTwo">
+
+    <ScrollViewer>
+        <Grid Background="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="70"/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16">Вариант №2</TextBlock>
+            <TextBlock Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" FontWeight="SemiBold">Числа от 1 до 1000. Арифметические действия: сложение,вычитание, деление и умножение</TextBlock>
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="30"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Padding="10" TextWrapping="Wrap" Grid.Row="0" FontSize="16" Grid.ColumnSpan="3" FontWeight="SemiBold">1. Решите задачу.</TextBlock>
+                    <TextBlock Grid.Row="1" Grid.ColumnSpan="3" TextWrapping="Wrap" Padding="10" FontSize="14">На одном участке школьники вырастили 240 кг капусты, на другом – в 2
+раза меньше. Четвертую часть всей капусты израсходовали на корм
+кроликам. Сколько килограммов капусты израсходовали на корм кроликам?</TextBlock>
+                    <TextBlock Padding="10" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Width="auto" FontSize="14" HorizontalAlignment="Left">Введите ваш ответ:</TextBlock>
+                    <TextBox PreviewKeyDown="txtbx1_PreviewKeyDown" x:Name="txtbx1" Width="100" Height="35" Grid.Row="2" Grid.Column="1"  HorizontalAlignment="Left" Margin="5 0 0 0"/>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="1" Margin="0 10 0 0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Padding="10" FontSize="16" Grid.Row="0" FontWeight="SemiBold">2. Найдите значение выражений.</TextBlock>
+                    <TextBlock Padding="10" FontSize="14" Grid.Column="0" Grid.Row="1">(18 + 36) : 9 + 6 · 8 – 50</TextBlock>
+                    <TextBlock Padding="10" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Width="auto" FontSize="14" HorizontalAlignment="Left">Введите ваш ответ:</TextBlock>
+                    <TextBox x:Name="txtbx2" Width="100" Height="35" Grid.Row="2" Grid.Column="0" Margin="140 0 0 0"  HorizontalAlignment="Left" />
+                    <TextBlock Padding="10" FontSize="14" Grid.Column="1" Grid.Row="1">720 : (2 + 7) + (140 – 90)</TextBlock>
+                    <TextBlock Padding="10" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" Width="auto" FontSize="14" HorizontalAlignment="Left">Введите ваш ответ:</TextBlock>
+                    <TextBox x:Name="txtbx3" Width="100" Height="35" Grid.Row="2" Grid.Column="1" Margin="140 0 0 0"  HorizontalAlignment="Left" />
+                </Grid>
+                <Grid Grid.Row="2" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Row="0" Grid.ColumnSpan="4" Padding="10" FontSize="16" FontWeight="SemiBold">3. Решите примеры.</TextBlock>
+                    <TextBlock Grid.Row="1" Grid.Column="0" Padding="10" FontSize="14">523 + 197 =</TextBlock>
+                    <TextBox x:Name="txtbx4" Grid.Row="1" Grid.Column="0" Width="100" Margin="75 0 0 0"/>
+                    <TextBlock Grid.Row="1" Grid.Column="1" Padding="10" FontSize="14">831 – 369 =</TextBlock>
+                    <TextBox x:Name="txtbx5" Grid.Row="1" Grid.Column="1" Width="100" Margin="30 0 0 0"/>
+                    <TextBlock Grid.Row="1" Grid.Column="2" Padding="10" FontSize="14">279 · 3 =</TextBlock>
+                    <TextBox x:Name="txtbx6" Grid.Row="1" Grid.Column="2" Width="100" Margin="55 0 0 0"/>
+                    <TextBlock Grid.Row="1" Grid.Column="3" Padding="10" FontSize="14">792 : 2 =</TextBlock>
+                    <TextBox x:Name="txtbx7" Grid.Row="1" Grid.Column="3" Width="100" Margin="25 0 0 0"/>
+                </Grid>
+                <Grid Grid.Row="3" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Row="0" Grid.Column="0" Padding="10" FontSize="16" FontWeight="SemiBold">4. Переведите</TextBlock>
+                    <TextBlock Grid.Row="1" Grid.Column="0" Padding="10" FontSize="14">275 см = ...м ...дм ...см</TextBlock>
+                    <TextBlock Padding="10" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Width="auto" FontSize="12" HorizontalAlignment="Left">Укажите  м:</TextBlock>
+                    <TextBox x:Name="txtbx8" Width="100" Height="35" Grid.Row="2" Grid.Column="0" Margin="90 0 0 0"  HorizontalAlignment="Left"/>
+                    <TextBlock Padding="10" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" Width="auto" FontSize="12" HorizontalAlignment="Left">Укажите  дм:</TextBlock>
+                    <TextBox x:Name="txtbx9" Width="100" Height="35" Grid.Row="3" Grid.Column="0" Margin="90 0 0 0"  HorizontalAlignment="Left"/>
+                    <TextBlock Padding="10" Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" Width="auto" FontSize="12" HorizontalAlignment="Left">Укажите  см:</TextBlock>
+                    <TextBox x:Name="txtbx10" Width="100" Height="35" Grid.Row="4" Grid.Column="0" Margin="90 0 0 0"  HorizontalAlignment="Left"/>
+
+                    <TextBlock Grid.Row="1" Grid.Column="1" Padding="10" FontSize="14">8м 4 см = ...см</TextBlock>
+                    <TextBlock Padding="10" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" Width="auto" FontSize="12" HorizontalAlignment="Left">Укажите  см:</TextBlock>
+                    <TextBox x:Name="txtbx11" Width="100" Height="35" Grid.Row="2" Grid.Column="1" Margin="90 0 0 0"  HorizontalAlignment="Left"/>
+
+                    <TextBlock Grid.Row="1" Grid.Column="2" Padding="10" FontSize="14">631 дм = ...м ...дм</TextBlock>
+                    <TextBlock Padding="10" Grid.Row="2" Grid.Column="2" VerticalAlignment="Center" Width="auto" FontSize="12" HorizontalAlignment="Left">Укажите  м:</TextBlock>
+                    <TextBox x:Name="txtbx12" Width="100" Height="35" Grid.Row="2" Grid.Column="2" Margin="90 0 0 0"  HorizontalAlignment="Left"/>
+                    <TextBlock Padding="10" Grid.Row="3" Grid.Column="2" VerticalAlignment="Center" Width="auto" FontSize="12" HorizontalAlignment="Left">Укажите  дм:</TextBlock>
+                    <TextBox x:Name="txtbx13" Width="100" Height="35" Grid.Row="3" Grid.Column="2" Margin="90 0 0 0"  HorizontalAlignment="Left"/>
+
+                    <TextBlock Grid.Row="1" Grid.Column="3" Padding="10" FontSize="14">900 см^2 = ...дм</TextBlock>
+                    <TextBlock Padding="10" Grid.Row="2" Grid.Column="3" VerticalAlignment="Center" Width="auto" FontSize="12" HorizontalAlignment="Left">Укажите  дм^2:</TextBlock>
+                    <TextBox x:Name="txtbx14" Width="100" Height="35" Grid.Row="2" Grid.Column="3" Margin="105 0 0 0"  HorizontalAlignment="Left"/>
+                </Grid>
+                <Grid Grid.Row="4" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Row="0" Grid.ColumnSpan="2" Padding="10" FontSize="16" FontWeight="SemiBold">5. Найдите площадь и периметр прямоугольника со сторонами 2 см и 6 см.</TextBlock>
+                    <TextBlock Grid.Row="1" Grid.Column="0" Padding="10" FontSize="14">Укажите площадь:</TextBlock>
+                    <TextBox x:Name="txtbx15" Width="100" Height="35" Grid.Row="2" Grid.Column="0" Margin="140 0 0 0"  HorizontalAlignment="Left"/>
+                    <TextBlock Grid.Row="1" Grid.Column="1" Padding="10" FontSize="14">Укажите периметр:</TextBlock>
+                    <TextBox x:Name="txtbx16" Width="100" Height="35" Grid.Row="2" Grid.Column="1" Margin="140 0 0 0"  HorizontalAlignment="Left"/>
+
+                </Grid>
+
+            </Grid>
+            <Grid Grid.Row="5" Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="380"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="380"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Border Grid.Column="1" Grid.Row="1" CornerRadius="5 5 5 5">
+                    <Button Style="{StaticResource ButtonMainGreen}" x:Name="btnFin" Content="Завершить" Click="btnFin_Click"/>
+                </Border>
+
+            </Grid>
+
+        </Grid>
+    </ScrollViewer>
+</Page>

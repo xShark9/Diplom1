@@ -1,0 +1,33 @@
+﻿<Page x:Class="AuthAPP.Views.Pages.HomePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AuthAPP.Views.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="650" d:DesignWidth="1000"
+      Title="Главная страница" Loaded="PageLoaded">
+
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="70"/>
+        </Grid.RowDefinitions>
+        <DataGrid Grid.Row="1" Width="850" AutoGenerateColumns="False" x:Name="DtOp" IsReadOnly="True" CanUserAddRows="False" RowStyle="{DynamicResource DataGridRowStyle1}" CellStyle="{DynamicResource DataGridCellStyle1}" Style="{DynamicResource DataGridStyle1}" ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="№" Width="50" Binding="{Binding IdTest}"/>
+                <DataGridTextColumn Header="Название теста" Width="200" Binding="{Binding TestName}"/>
+                <DataGridTextColumn Header="Вариант" Width="100" Binding="{Binding TaskOption}"/>
+                <DataGridTextColumn Header="Кол-во вопросов" Width="135" Binding="{Binding NumberQuestions}"/>
+                <DataGridTextColumn Header="Правильные ответы" Width="150" Binding="{Binding CorrectAnswers}"/>
+                <DataGridTextColumn Header="Кол-во баллов" Width="*" Binding="{Binding NumberPoints}"/>
+                <DataGridTextColumn Header="Оценка" Width="80" Binding="{Binding Evaluation}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        
+        <TextBlock x:Name="TBlockWelcom" HorizontalAlignment="Left" Margin="26,29,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontFamily="Tahoma" FontSize="20"/>
+        <Button Content="Продолжить обучение" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Height="40" Width="200" Click="Button_Click" Style="{StaticResource buttonMain}"/>
+
+    </Grid>
+</Page>
